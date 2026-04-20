@@ -176,7 +176,8 @@ export const userAPI = {
 export const productAPI = {
   getAll: (filters = {}) => {
     const params = new URLSearchParams(filters);
-    return publicApiCall(`/products?${params}`);
+    const queryString = params.toString() ? `?${params}` : '';
+    return publicApiCall(`/products${queryString}`);
   },
   getById: (id) => publicApiCall(`/products/${id}`),
   // Get products with pagination

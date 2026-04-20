@@ -25,10 +25,15 @@ function NewArrivals() {
     const fetchProducts = async () => {
       try {
         setLoading(true);
+        console.log('Fetching products from API...');
         const data = await productAPI.getAll();
+        console.log('Products API response:', data);
+        console.log('Products array:', data.products);
+        console.log('Products count:', data.products?.length);
         setProducts(data.products || []);
         setError(null);
       } catch (err) {
+        console.error('Error fetching products:', err);
         setError('Failed to load products');
         setProducts([]);
       } finally {
