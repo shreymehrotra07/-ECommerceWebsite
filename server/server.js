@@ -57,12 +57,10 @@ app.use(loggingMiddleware);
 
 // CORS configuration with credentials support
 const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' 
-    ? process.env.CLIENT_URL // Your production client URL
-    : ['http://localhost:5173', 'http://localhost:3000'], // Your development client URLs
-  credentials: true, // Allow credentials (cookies)
-  optionsSuccessStatus: 200
+  origin: "*",
+  credentials: true
 };
+
 app.use(cors(corsOptions));
 
 app.use(express.json());
