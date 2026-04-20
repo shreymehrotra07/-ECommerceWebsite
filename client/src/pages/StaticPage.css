@@ -1,0 +1,190 @@
+/* ===== STATIC PAGES — CRIMSON & CHARCOAL ===== */
+
+.static-page {
+  min-height: 100vh;
+  background: var(--charcoal);
+  padding: 120px 48px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Crimson top accent */
+.static-page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--crimson), transparent);
+}
+
+.static-container {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.static-card {
+  background: var(--charcoal-2);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* HEADER */
+.static-header {
+  background: var(--charcoal-3);
+  padding: 48px 56px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.static-header::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--crimson);
+}
+
+.static-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 900;
+  color: var(--white);
+  margin: 0;
+  letter-spacing: -1px;
+  line-height: 1.05;
+}
+
+.static-header h1 em {
+  color: var(--crimson);
+  font-style: italic;
+}
+
+/* CONTENT */
+.static-content {
+  padding: 52px 56px;
+}
+
+.static-content p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--silver);
+  line-height: 1.9;
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+.static-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 44px 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+}
+
+.static-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0;
+  width: 40px; height: 2px;
+  background: var(--crimson);
+}
+
+.static-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.static-content ul li {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--silver);
+  padding: 10px 0 10px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  position: relative;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.static-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  transform: translateY(-50%);
+  width: 6px; height: 6px;
+  background: var(--crimson);
+  border-radius: 50%;
+}
+
+.static-content ul li strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* FAQ ITEMS */
+.faq-item {
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faq-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+}
+
+/* CAREER POSITIONS */
+.career-position {
+  background: var(--charcoal-3);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--crimson);
+  border-radius: 6px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+
+.career-position h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 10px;
+}
+
+.career-position p {
+  margin-bottom: 16px;
+}
+
+.career-position ul {
+  margin-bottom: 0;
+}
+
+.career-position ul li {
+  border-bottom: none;
+  padding: 6px 0 6px 22px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .static-page { padding: 100px 20px 60px; }
+  .static-header { padding: 32px 28px; }
+  .static-content { padding: 36px 28px; }
+}

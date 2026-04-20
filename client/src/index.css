@@ -1,0 +1,12 @@
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020617;   /* deep black / navy */
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+}
